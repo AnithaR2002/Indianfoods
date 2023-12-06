@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            background-color: #ffffff;
+        }
+        .main{
+            width: 80%;
+            height: 2000px;
+            /* display: flex;
+            align-items: center;
+            justify-content: flex-start; */
+            flex-direction: column;
+            margin-left: 100px;
+            margin-top: -70px
+        }
+        header{
+            height: 60px;
+            width: 100%;
+            border: transparent;
+            display: flex;
+            position: fixed;
+            gap: 50px;
+            align-items: center;
+        }
+        input{
+            border: transparent;
+            background-color: whitesmoke ;
+            width: 700px;
+            /* height: 50px; */
+        }
+        
+        header .search{
+            height: 40px;
+            width: 950px;
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+        }
+        .search svg{
+           background-color: whitesmoke;;
+            margin: 10px;
+        }
+        svg{
+            margin-left: 150px;
+    
+        }
+        .login{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .primary-text{
+            font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;
+        }
+        p{
+            gap: 50px;
+        }
+       .login p:hover{
+             /* height: 50px; */
+             width: 50px;
+             border: orange;
+             background-color: gainsboro; 
+             transition: background-color 0.2s ease-out;
+             position: fixed;
+             cursor: pointer;
+
+
+        }
+        .main-container{
+            height: 1900px;
+            width: 100%;
+            background-color: aqua;
+            margin-left: 50px;
+        }
+        .main-container .home {
+            height: 50px;
+            width: 100%;
+            /* border: 1px black solid; */
+            background-color:white;
+            
+        }
+        .home p{
+            font-size: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 70px;
+            border-color: green;
+            
+        }
+        .main-container{
+            height: 1400px;
+            width: 95%;
+            background-color: white;
+        }
+        .main-menu{
+            height: 90px;
+            width: 100% -16px;
+            background-color: #ffffff;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* padding: 0px 20px; */
+            border-bottom: 1px solid #ffffff;
+        }
+        .home p{
+            font-size: 10   px;
+            font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;
+            color: gainsboro;
+            font-weight: 500;
+            cursor: pointer;
+            flex: 1;
+            margin-top: 50px;
+        }
+        /* .travel{ */
+            /* height: 100px;
+            width: 100%;
+            background-color: antiquewhite;
+            border: 1ps solid black;
+            margin-top: 200px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;  */
+            /* border-radius: 50%; */
+            /* background-color: aliceblue; */
+           
+        /* } */
+        .travel  img{
+            border-radius: 40%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 240px;
+            margin-left: -970px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            cursor: pointer;
+
+            
+        }
+        .travel p{
+            font-size: 18px;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            font-weight: 500;
+            margin-left: -900px;
+            margin-top: -40px;
+            background-color:  white;
+            color: orange;
+            /* position: fixed; */
+           
+        }
+        .dining img{
+            border-radius: 40%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 240px;
+            margin-left: -800px;
+            border-radius: 50%;
+            background-color: antiquewhite;  
+            cursor: pointer;
+        }
+        .dining p{
+            font-size: 18px;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            font-weight: 500;
+            margin-left: -730px;
+            margin-top: -40px;
+            background-color:  white;
+            color: orange;
+            /* position: fixed; */
+        }
+        .nightlife img{
+            border-radius: 40%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 240px;
+            margin-left: -590px;
+            border-radius: 50%;
+            background-color: antiquewhite; 
+            cursor: pointer;
+
+
+        }
+        .nightlife p{
+            font-size: 18px;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            font-weight: 500;
+            margin-left: -520px;
+            margin-top: -38px;
+            background-color:  white;
+            color: orange;
+            /* position: fixed; */
+        }
+        /* .inspiration{
+            height: 400px;
+            width: 100%;
+            background-color: aqua;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        } */
+        .ins{
+            height: 300px;
+            width: 100%;
+            font-size: 20px;
+            background-color:whitesmoke;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            margin-top: 850px;
+            margin-left: -1050px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row; 
+        }
+        .ins .ins-wrapper{
+                    /* height: 300px;
+                    width: 200px;  */
+                    border:transparent;
+                    font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+                    margin-top: 22px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin-top: 50px;
+            background-color:whitesmoke;
+
+
+        }
+        .ins-wrapper-image{
+            /* width: 205px; */
+            margin-bottom: 50px;
+            /* border: 1px solid; */
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            background-color:whitesmoke;
+
+        }
+        .ins-wrapper-image:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+        .ins .ins-wrapper-image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 2px 2px 20px gray;
+
+        }
+
+
+        .top{
+            height: 300px;
+            width: 100%;
+            font-size: 20px;
+            background-color:whitesmoke;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            margin-top: 1650px;
+            margin-left: -1100px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row; 
+        }
+        .top .top-wrapper{
+                    /* height: 300px;
+                    width: 200px;  */
+                    border:transparent;
+                    font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+                    /* margin-top: px; */
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin-top: 50px;
+                    background-color:whitesmoke;
+
+
+        }
+        .top-wrapper-image{
+            /* width: 205px; */
+            margin-bottom: 50px;
+            /* border: 1px solid; */
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            background-color:whitesmoke;
+
+        }
+        .top-wrapper-image:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+        .top .top-wrapper-image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 2px 2px 20px gray;
+            
+        }
+        h3{
+            margin-top: 1250px;
+            margin-left: -1090px;
+            flex-direction: row;
+            font-size: 35px;
+            cursor: pointer;
+           
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+
+        }
+        h2{
+            margin-top: 480px;
+            flex-direction: column;
+            margin-left: -1040px;
+            font-size: 35px;
+            cursor: pointer;
+            /* background-color: whitesmoke; */
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+
+        }
+        .res{
+            height: 400px;
+            width: 100%;
+            font-size: 20px;
+            background-color:whitesmoke;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            margin-top: 1000px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        .res .res-wrapper{
+                    height: 350px;
+                    width: 350px; 
+                    border: transparent;
+                    font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+                    margin-top: 22px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    cursor: pointer;
+
+        }
+         .res-wrapper-image{
+            width: 225px;
+            margin-bottom: 50px;
+            border: transparent; 
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 20px gray;
+
+        }
+        .res-wrapper-image:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+        .res .res-wrapper-image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .res-wrapper:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+        /* p{
+            margin-top: 1000px;
+            flex-direction: row;
+            margin-left: 800px;
+            
+        } */
+        .ind{
+            height: 400px;
+            width: 100%;
+            font-size: 20px;
+            background-color:whitesmoke;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            margin-top: -10px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        .ind .ind-wrapper{
+                    height: 350px;
+                    width: 350px; 
+                    border: transparent;
+                    font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+                    margin-top: 22px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    cursor: pointer;
+
+        }
+         .ind-wrapper-image{
+            width: 225px;
+            margin-bottom: 50px;
+            border: transparent; 
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 20px gray;
+
+        }
+        .ind-wrapper-image:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+        .ind .ind-wrapper-image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .ind-wrapper:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+
+        .ice{
+            height: 400px;
+            width: 100%;
+            font-size: 20px;
+            background-color:whitesmoke;
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            margin-top: -10px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        .ice .ice-wrapper{
+                    height: 350px;
+                    width: 350px; 
+                    border: transparent;
+                    font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+                    margin-top: 22px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    cursor: pointer;
+
+        }
+         .ice-wrapper-image{
+            width: 225px;
+            margin-bottom: 50px;
+            border: transparent; 
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 20px gray;
+
+        }
+        .ice-wrapper-image:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+        .ice .ice-wrapper-image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .ice-wrapper:hover{
+            transform: scale(1.05);
+            transition: transform 0.1s ease-out;
+        }
+         
+       
+        
+        
+    </style>
+</head>
+<body>
+    <!-- Nav bar starts -->
+    <div class="main"> 
+        <header>
+            <img src="foodlogo.png" height="50px" width="140px">
+            <!-- search div -->
+            <div class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <input type="" id="" placeholder="Bengaluru"> 
+            
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+            <input type="" id="" placeholder="Search for restaurant,cuisine or a dish" width="100px"> 
+            <!-- Login div -->
+        </div>
+        <div class="login">
+            <p class="primary-text">Login</p>
+        </div>
+          <p class="primary-text">Sign in</p>
+        </header>
+        <!-- nav bar stops   -->
+        <!-- home india starts -->
+        
+        <div class="main-container">
+            <div class="main-menu">
+            <div class="home">
+                <p>Home / India / Bengaluru Restaurants</p>
+            </div>
+           
+            <div class="travel">
+                <img src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp" alt="" height="60px", width="60px">
+                <p>Delivery</p>
+            </div>
+            <div class="dining">
+                <img src="https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png?output-format=webp" alt="" height="60px" width="60px">
+                <p>Dining Out</p>
+            </div>
+            <div class="nightlife">
+                <img src="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png?output-format=webp" alt="" height="60px" width="60px">
+                <p>NightLife</p>
+                
+            </div>
+            
+                    <!-- home india stops -->
+            <div ><h2>Inspiration for your first order</h2></div>
+            <div class="ins"> 
+            <div class="ins-wrapper">
+            <div class="ins-wrapper-image">
+            <img src="birice.webp" alt="" height="150px", width="150px">
+            <p align="center" background="whitesmoke"><b>Biriyani</b></p>
+            <!-- <span  background="whitesmoke"><b>From&#8377;1000</b></span> -->
+            </div>
+            </div>
+
+            <div class="ins-wrapper" background="whitesmoke">
+                <div class="ins-wrapper-image">
+                <img src="Rolls.webp" alt="" height="150px", width="150px">
+                <p align="center"><b background="whitesmoke">Rolls</b></p>
+                <!-- <span><b>From&#8377;999</b></span> -->
+                </div>
+                </div>
+
+                <div class="ins-wrapper">
+                    <div class="ins-wrapper-image">
+                    <img src="pizza.webp" alt="" height="150px", width="150px">
+                    <p align="center"><b>pizza</b></p>
+                    <!-- <span><b>From&#8377;999</b></span> -->
+                    </div>
+                    </div>
+
+                    <div class="ins-wrapper">
+                        <div class="ins-wrapper-image">
+                        <img src="Noodles.webp" alt="" height="150px", width="150px">
+                        <p align="center"><b>Noodles</b></p>
+                        <!-- <span><b>From&#8377;999</b></span> -->
+                        </div>
+                        </div>
+                        <div class="ins-wrapper">
+                            <div class="ins-wrapper-image">
+                            <img src="Appam.avif" alt="" height="150px", width="150px">
+                            <p align="center"><b>Appam</b></p>
+                            <!-- <span><b>From&#8377;999</b></span> -->
+                            </div>
+                            </div>
+                        </div> 
+
+                        
+                        <div ><h3>Top Brands for you</h3></div>
+                        <div class="top"> 
+                           
+                            <div class="top-wrapper">
+                            <div class="top-wrapper-image">
+                            <img src="megna.avif" alt="" height="150px", width="150px">
+                            <!-- <p align="center" background="whitesmoke"><b>Meghana Foods</b></p> -->
+                            <!-- <span  background="whitesmoke"><b>From&#8377;1000</b></span> -->
+                            </div>
+                            </div>
+                
+                            <div class="top-wrapper" background="whitesmoke">
+                                <div class="top-wrapper-image">
+                                <img src="empire.avif" alt="" height="150px", width="150px">
+                                <!-- <p align="center"><b background="whitesmoke">Empire Restaurant</b></p> -->
+                                <!-- <span><b>From&#8377;999</b></span> -->
+                                </div>
+                                </div>
+                
+                                <div class="top-wrapper">
+                                    <div class="top-wrapper-image">
+                                    <img src="mcdel.avif" alt="" height="150px", width="150px">
+                                    <!-- <p align="center"><b>McDonald's</b></p> -->
+                                    <!-- <span><b>From&#8377;999</b></span> -->
+                                    </div>
+                                    </div>
+                
+                                    <div class="top-wrapper">
+                                        <div class="top-wrapper-image">
+                                        <img src="burger.avif" alt="" height="150px", width="150px">
+                                        <!-- <p align="center"><b>Burger King</b></p> -->
+                                        <!-- <span><b>From&#8377;999</b></span> -->
+                                        </div>
+                                        </div>
+                                        <div class="top-wrapper">
+                                            <div class="top-wrapper-image">
+                                            <img src="kfc.avif" alt="" height="150px", width="150px">
+                                            <!-- <p align="center"><b>KFC</b></p> -->
+                                            <!-- <span><b>From&#8377;999</b></span> -->
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div><p>Indian Restaurants</p></div> -->
+                                        
+                
+    </div>
+    
+           <div class="res"> 
+           <div class="res-wrapper">
+            <div class="res-wrapper-image">
+            <img src="kunafa.avif" alt="" height="200px", width="200px">
+            <p align="center"><b>Kunafa world</b></p>
+            <span>Dessrts</span>
+            </div>
+            </div>
+                            
+            <div class="res-wrapper">
+            <div class="res-wrapper-image">
+            <img src="restaurant.avif" alt="" height="200px", width="200px">
+            <p align="center"><b>Empire Restaurant</b></p>
+            <span>North Indian,Biriyani,keba..</span>
+            </div>
+            </div>
+                            
+            <div class="res-wrapper">
+            <div class="res-wrapper-image">
+            <img src="living.avif" alt="" height="200px", width="200px">
+            <p align="center"><b>Living Bowls</b></p>
+            <span>Healthy Food, Salad, Juices</span>
+            </div>
+            </div>
+                            
+                                                
+        </div>  
+
+        <div class="ind"> 
+            <div class="ind-wrapper">
+             <div class="ind-wrapper-image">
+             <img src="dum.avif" alt="" height="200px", width="200px">
+             <p align="center"><b>Dum Biriyani</b></p>
+             <span>North Indian <Biriyani class=""></Biriyani></span>
+             </div>
+             </div>
+                             
+             <div class="ind-wrapper">
+             <div class="ind-wrapper-image">
+             <img src="adayar.avif" alt="" height="200px", width="200px">
+             <p align="center"><b>Adayar Anantha Bhavan</b></p>
+             <span>South Indian</span>
+             </div>
+             </div>
+                             
+             <div class="ind-wrapper">
+             <div class="ind-wrapper-image">
+             <img src="nandhana.avif" alt="" height="200px", width="200px">
+             <p align="center"><b>Nandhana Palace</b></p>
+             <span>Andhra,North Indians</span>
+             </div>
+             </div>
+                             
+                                                 
+         </div>  
+       
+         <div class="ice"> 
+            <div class="ice-wrapper">
+             <div class="ice-wrapper-image">
+             <img src="polar.avif" alt="" height="200px", width="200px">
+             <p align="center"><b>Polar Bear</b></p>
+             <span>Ice cream,Desserts</span>
+             </div>
+             </div>
+                             
+             <div class="ice-wrapper">
+             <div class="ice-wrapper-image">
+             <img src="milano.avif" alt="" height="200px", width="200px">
+             <p align="center"><b>Milano Ice Cream</b></p>
+             <span>Ice cream,Desserts</span>
+             </div>
+             </div>
+                             
+             <div class="ice-wrapper">
+             <div class="ice-wrapper-image">
+             <img src="corner.avif" alt="" height="200px", width="200px">
+             <p align="center"><b>Corner House Ice creame</b></p>
+             <span>Ice cream,Desserts</span>
+             </div>
+             </div>
+                             
+                                                 
+         </div>  
+    </div>
+
+</div>
+</body>
+</html>
